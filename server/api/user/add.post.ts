@@ -5,7 +5,7 @@ import { userTable } from "~~/server/database/schema"
 export default defineEventHandler(async (event) => {
    await  useDB().insert(userTable).values({
       email: "myTest@google.com",
-      username: "testUsername",
+      username: `${Math.random()} + new user`,
       name: "test",
       role: `customer`,
     })
